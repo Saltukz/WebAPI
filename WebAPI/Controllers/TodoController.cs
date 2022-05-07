@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using WebAPI.Entities;
 using WebAPI.Models;
@@ -7,6 +8,7 @@ namespace WebAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [Authorize]
     public class TodoController : Controller
     {
         private DatabaseContext _db;
